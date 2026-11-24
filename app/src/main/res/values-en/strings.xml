@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Docs</string>
+    <string name="tagline">All your documents in one app</string>
+    <string name="open_file">Open file</string>
+    <string name="open_file_hint">Pick a PDF, Word, Excel, PowerPoint or text file</string>
+    <string name="recent_files">Recent files</string>
+    <string name="search_hint">Search…</string>
+    <string name="no_recent_files">No file opened yet — tap “Open file”</string>
+    <string name="no_search_results">Nothing found</string>
+    <string name="filter_all">All</string>
+    <string name="filter_pdf">PDF</string>
+    <string name="filter_office">Office</string>
+    <string name="filter_text">Text</string>
+    <string name="delete">Delete</string>
+    <string name="clear_all">Clear all</string>
+    <string name="clear_recents_confirm">Clear the recent files list?</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="save_failed">Could not save</string>
+    <string name="edit">Edit</string>
+    <string name="done">Done</string>
+    <string name="error_open_file">Could not open the file</string>
+    <string name="unsupported_type">This file type is not supported</string>
+    <string name="file_too_large">File is too large</string>
+    <string name="page_of">%1$d / %2$d</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="slide">Slide</string>
+    <string name="back">Back</string>
+    <string name="error_load_failed">Could not read the file</string>
+    <string name="discard_changes">Discard changes?</string>
+    <string name="discard_changes_text">Unsaved changes will be lost.</string>
+    <string name="keep_editing">Keep editing</string>
+    <string name="discard">Discard</string>
+    <string name="empty_document">Document is empty</string>
+    <string name="no_text_in_document">No text found</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Docs</string>
+    <string name="tagline">Все документы в одном приложении</string>
+    <string name="open_file">Открыть файл</string>
+    <string name="open_file_hint">Выберите PDF, Word, Excel, PowerPoint или текстовый файл</string>
+    <string name="recent_files">Недавние файлы</string>
+    <string name="search_hint">Поиск…</string>
+    <string name="no_recent_files">Файлов пока нет — нажмите «Открыть файл»</string>
+    <string name="no_search_results">Ничего не найдено</string>
+    <string name="filter_all">Все</string>
+    <string name="filter_pdf">PDF</string>
+    <string name="filter_office">Office</string>
+    <string name="filter_text">Текст</string>
+    <string name="delete">Удалить</string>
+    <string name="clear_all">Очистить всё</string>
+    <string name="clear_recents_confirm">Очистить список недавних файлов?</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="saved">Сохранено</string>
+    <string name="save_failed">Не удалось сохранить</string>
+    <string name="edit">Редактировать</string>
+    <string name="done">Готово</string>
+    <string name="error_open_file">Не удалось открыть файл</string>
+    <string name="unsupported_type">Этот тип файла не поддерживается</string>
+    <string name="file_too_large">Файл слишком большой</string>
+    <string name="page_of">%1$d / %2$d</string>
+    <string name="zoom_in">Увеличить</string>
+    <string name="zoom_out">Уменьшить</string>
+    <string name="slide">Слайд</string>
+    <string name="back">Назад</string>
+    <string name="error_load_failed">Не удалось прочитать файл</string>
+    <string name="discard_changes">Отменить изменения?</string>
+    <string name="discard_changes_text">Несохранённые изменения будут потеряны.</string>
+    <string name="keep_editing">Продолжить редактирование</string>
+    <string name="discard">Отменить</string>
+    <string name="empty_document">Документ пуст</string>
+    <string name="no_text_in_document">Текст не найден</string>
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+</resources>

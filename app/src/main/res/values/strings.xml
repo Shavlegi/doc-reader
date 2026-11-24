@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Docs</string>
+    <string name="tagline">ყველა დოკუმენტი ერთ აპში</string>
+    <string name="open_file">ფაილის გახსნა</string>
+    <string name="open_file_hint">აირჩიე PDF, Word, Excel, PowerPoint ან ტექსტური ფაილი</string>
+    <string name="recent_files">ბოლო ფაილები</string>
+    <string name="search_hint">ძებნა…</string>
+    <string name="no_recent_files">ჯერ ფაილი არ გაგიხსნია — დააჭირე „ფაილის გახსნას"</string>
+    <string name="no_search_results">ვერაფერი მოიძებნა</string>
+    <string name="filter_all">ყველა</string>
+    <string name="filter_pdf">PDF</string>
+    <string name="filter_office">Office</string>
+    <string name="filter_text">ტექსტი</string>
+    <string name="delete">წაშლა</string>
+    <string name="clear_all">ყველას გასუფთავება</string>
+    <string name="clear_recents_confirm">ბოლო ფაილების სია გაიწმინდოს?</string>
+    <string name="cancel">გაუქმება</string>
+    <string name="save">შენახვა</string>
+    <string name="saved">შენახულია</string>
+    <string name="save_failed">შენახვა ვერ მოხერხდა</string>
+    <string name="edit">რედაქტირება</string>
+    <string name="done">მზადაა</string>
+    <string name="error_open_file">ფაილის გახსნა ვერ მოხერხდა</string>
+    <string name="unsupported_type">ამ ტიპის ფაილი არ იხსნება</string>
+    <string name="file_too_large">ფაილი ძალიან დიდია</string>
+    <string name="page_of">%1$d / %2$d</string>
+    <string name="zoom_in">გადიდება</string>
+    <string name="zoom_out">დაპატარავება</string>
+    <string name="slide">სლაიდი</string>
+    <string name="back">უკან</string>
+    <string name="error_load_failed">ფაილის წაკითხვა ვერ მოხერხდა</string>
+    <string name="discard_changes">ცვლილებების გაუქმება?</string>
+    <string name="discard_changes_text">შენახული ცვლილებები დაიკარგება.</string>
+    <string name="keep_editing">რედაქტირების გაგრძელება</string>
+    <string name="discard">გაუქმება</string>
+    <string name="empty_document">დოკუმენტი ცარიელია</string>
+    <string name="no_text_in_document">ტექსტი ვერ მოიძებნა</string>
+    <string name="today">დღეს</string>
+    <string name="yesterday">გუშინ</string>
+</resources>
