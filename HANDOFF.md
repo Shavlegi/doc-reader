@@ -65,6 +65,16 @@ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml + ic_launcher_round.xml (adap
 - POI 5.2.5 + scratchpad 5.2.5 + desugar 2.0.4 existence verified with HTTP 200
   against repo1.maven.org / dl.google.com (2026-11-24).
 
+## First build — fix applied 2026-11-25 02:04
+- Run #1 (commit dbaf433) **FAILED** at `compileDebugKotlin`: unresolved `FolderOpen` (HomeScreen), `Remove` (PdfViewer), `Save` (ViewerScreen). Cause: no icons dependency — material3 only pulls in `material-icons-core`, and those three icons live in `material-icons-extended`.
+- Fix (commit 8feb4724): added `implementation("androidx.compose.material:material-icons-extended")` to `app/build.gradle.kts`. Run #2 triggered by that push — check it before reporting the APK.
+
+## v1.1 — PDF viewer crash fix (2026-11-25 02:25, Shao's „კი, გაასწორე")
+- Shao's test: opening the 47-page Facebook Ads course PDF crashed the app („Docs keeps stopping"); the file itself is fine (47 pp, A4, WeasyPrint, 198 KB) and recents worked.
+- Root cause (most likely, from code review): `PdfPageItem` recycled the old bitmap in `DisposableEffect(bitmap)` whenever a new render finished — if Compose was still drawing the old bitmap, Android crashes with „trying to use a recycled bitmap". Second factor: render width cap was 2400 px (~26 MB/page at zoom 2x).
+- Fix in `PdfViewer.kt`: (1) recycle ONLY when the page leaves the list (`rememberUpdatedState` + `DisposableEffect(Unit)`); a replaced bitmap is left for GC. (2) render width cap 2400 → 1600 px.
+- Release v1.1 after the build goes green (tag v1.1, same release flow as v1.0).
+
 ## Known risks / things I am unsure of (check before/after first build)
 
 1. **POI on Android — duplicate classes / META-INF.** packagingOptions excludes the

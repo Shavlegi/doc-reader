@@ -35,6 +35,7 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -98,7 +99,7 @@ fun PdfViewer(uri: Uri, modifier: Modifier = Modifier) {
 
     val widthPx = with(density) {
         (screenWidthDp.dp * zoomLevels[zoomIndex]).toPx().toInt()
-    }.coerceAtMost(2400)
+    }.coerceAtMost(1600)
     val currentPage by remember {
         derivedStateOf { listState.firstVisibleItemIndex + 1 }
     }
@@ -154,8 +155,14 @@ private fun PdfPageItem(doc: PdfDoc, index: Int, widthPx: Int) {
     LaunchedEffect(doc, index, widthPx) {
         bitmap = runCatching { doc.renderPage(index, widthPx) }.getOrNull()
     }
-    DisposableEffect(bitmap) {
-        onDispose { bitmap?.recycle() }
+    // Recycle ONLY when this page leaves the list. Never recycle when the
+    // bitmap is replaced (e.g. zoom change): the old bitmap may still be
+    // drawn by the Image in the current frame, and recycling it crashes
+    // with "Canvas: trying to use a recycled bitmap". A replaced bitmap is
+    // left for the GC to free.
+    val latestBitmap = rememberUpdatedState(bitmap)
+    DisposableEffect(Unit) {
+        onDispose { latestBitmap.value?.recycle() }
     }
 
     val density = LocalDensity.current
