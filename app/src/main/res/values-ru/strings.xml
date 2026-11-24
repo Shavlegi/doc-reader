@@ -38,4 +38,8 @@
     <string name="no_text_in_document">Текст не найден</string>
     <string name="today">Сегодня</string>
     <string name="yesterday">Вчера</string>
+    <string name="crash_title">Приложение аварийно завершилось</string>
+    <string name="crash_hint">Этот текст показывает причину сбоя. Скопируйте и отправьте его мне.</string>
+    <string name="copy">Копировать</string>
+    <string name="copied">Скопировано</string>
 </resources>

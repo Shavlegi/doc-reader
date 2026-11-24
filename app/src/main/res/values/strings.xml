@@ -38,4 +38,8 @@
     <string name="no_text_in_document">ტექსტი ვერ მოიძებნა</string>
     <string name="today">დღეს</string>
     <string name="yesterday">გუშინ</string>
+    <string name="crash_title">აპი წინა ჯერზე დაიქრაშა</string>
+    <string name="crash_hint">ეს ტექსტი აჩვენებს კრაშის მიზეზს. დააკოპირე და გამომიგზავნე.</string>
+    <string name="copy">კოპირება</string>
+    <string name="copied">დაკოპირდა</string>
 </resources>

@@ -38,4 +38,8 @@
     <string name="no_text_in_document">No text found</string>
     <string name="today">Today</string>
     <string name="yesterday">Yesterday</string>
+    <string name="crash_title">The app crashed last time</string>
+    <string name="crash_hint">This text shows the reason of the crash. Copy it and send it to me.</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied</string>
 </resources>

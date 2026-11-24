@@ -75,6 +75,13 @@ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml + ic_launcher_round.xml (adap
 - Fix in `PdfViewer.kt`: (1) recycle ONLY when the page leaves the list (`rememberUpdatedState` + `DisposableEffect(Unit)`); a replaced bitmap is left for GC. (2) render width cap 2400 → 1600 px.
 - Release v1.1 after the build goes green (tag v1.1, same release flow as v1.0).
 
+## v1.2 — diagnostic build (2026-11-25 02:53, crash persists after v1.1)
+- Shao: „კიდევ იგივეა" — v1.1 still crashes the same way on opening the PDF. So the v1.1 recycle/width theory was WRONG (at default zoom the width cap changed nothing, and no bitmap replacement happens at open).
+- Checked and RULED OUT: all 38 string keys exist in all 3 locales; `page_of` format `%1$d / %2$d` is well-formed in all locales; open path is try/catch-guarded; render path is runCatching-guarded.
+- v1.2 adds an in-app crash catcher instead of guessing further: `data/CrashLog.kt` installs a default uncaught-exception handler that saves the stack trace to `filesDir/last-crash.txt` and chains to the system handler; `MainActivity` shows it on next launch in a dialog with „კოპირება" (copies to clipboard) + „done" (clears the log). New strings: crash_title, crash_hint, copy, copied (all 3 locales).
+- IMPORTANT: if no dialog appears after a crash, the crash is native (pdfium) or a hard OOM kill — that itself is the diagnosis.
+- Next: Shao installs v1.2, opens the PDF, lets it crash, reopens the app, copies/screenshots the shown reason. Then fix the REAL cause as v1.3.
+
 ## Known risks / things I am unsure of (check before/after first build)
 
 1. **POI on Android — duplicate classes / META-INF.** packagingOptions excludes the
